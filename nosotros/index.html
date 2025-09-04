@@ -1,0 +1,116 @@
+foto<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylenos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>card component</title>
+  </head>
+  <body>
+
+      <div class="index__cabecera">
+        <div class="index__header"> 
+            <header class="index__title">
+                <h1 class="index__title__tienda">Madrugadores </h1>
+        <h1 class="index__title__muebles" id="fecha-muebles"></h1>        
+            </header>
+        </div>
+
+        <div class="contenedor__navegacion">
+            <nav class="navegacion__principal">               
+                <a href="../index.html">Inicio</a>
+                <a href="../nosotros/index.html">Nosotros</a>
+                <a href="../asociados/index.html">Asociados</a>
+                <a href="../pronosticos/index.html">Pronosticos</a>
+                <a href="../galeria/index.html">Galeria</a>
+                <a href="../contacto/">Contacto</a>
+            </nav>                          
+        </div>
+    </div> 
+
+    <div class="contenedor">
+      <img src="../images/peñascal epico copia 3.png" alt="" />
+      <div class="texto">
+        <h1>
+          “Madrugar para  
+          <span>surfear</span>
+          y sanar para vivir.”
+        </h1>
+        <p class="parrafo">
+          Todo comenzó en mayo de 2023, cuando dos almas inquietas —Jerry San Martin y Kenko Rosemberg— se encontraron en el agua, buscando más que olas: buscaban conexión. Entre sets, surgió una idea sencilla pero poderosa: crear un grupo para compartir cómo estaba el mar antes de entrar. Pero en realidad, buscaban compañía, propósito y espíritu.
+          Así nació Los Madrugadores, oficialmente fundado el 23 de mayo por Jerry, Jonathan Sajoux y Kenko, nuestro líder por esencia: constante, generoso y presente. A ellos se sumó Edgardo Vargas, el primero en llegar cada mañana, no por costumbre, sino por fe. Para él, madrugar es un rito, una forma de estar en sintonía con el mar.
+          Desde entonces, compartimos más que pronósticos: compartimos valores, energía y rituales. Porque esto no es solo surf. Es una forma de vida.
+          El mar nos llamó. Y respondimos, juntos.
+          Somos "Los Madrugadores".
+        </p>
+        <div class="contenedor_num">
+          <p class="numero">70</p>
+          <span class="texto_num">miembros</span>
+        </div>
+        <div class="contenedor_num">
+          <p class="numero">3</p>
+          <span class="texto_num">points</span>
+        </div>
+        <div class="contenedor_num">
+          <p class="numero">1</p>
+          <span class="texto_num">Balnerio</span>
+          <br><br>
+          <span class="texto_num">San Bartolo - Lima _ Peru</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    const fechaActual = new Date().toLocaleDateString('es-PE', {
+      day: 'numeric',
+      month: 'long'
+    });
+    document.getElementById("fecha-muebles").textContent = fechaActual;
+  </script>
+  
+<footer class="footerindex">
+       <div class="footercontainer">            
+            <div class="footerdiv">
+                <h3 class="footertitulo">Categorías</h3>
+                <nav class="footermenu">
+                    <a href="#">Inicio</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Asociados</a>
+                    <a href="#">Pronosticos</a>
+                    <a href="#">Galeria</a>
+                    <a href="#">Contactos</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3 class="footertitulo">Sobre Nosotros</h3>
+                <nav class="footermenu">
+                    <a href="#">Nuestra Historia</a>
+                    <a href="#">Misión, Visión y Valores</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos del Servicio</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3 class="footertitulo">Soporte</h3>
+                <nav class="footermenu">
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Ayuda en línea</a>
+                    <a href="#">Cámaras</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <p class="copyright">Todos los derechos Reservados, Madrugadores</p>
+    </footer>
+</body>
+</html>
+ 

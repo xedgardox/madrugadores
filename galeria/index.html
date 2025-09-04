@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eva8galeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Raleway:wght@400;700;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="index__cabecera">
+        <div class="index__header"> 
+            <header class="index__title">
+                <h1 class="index__title__tienda">Madrugadores </h1>
+        <h1 class="index__title__muebles" id="fecha-muebles"></h1>        
+            </header>
+        </div>
+
+        <div class="contenedor__navegacion">
+            <nav class="navegacion__principal">               
+                <a href="../index.html">Inicio</a>
+                <a href="../nosotros/index.html">Nosotros</a>
+                <a href="../asociados/index.html">Asociados</a>
+                <a href="../pronosticos/index.html">Pronosticos</a>
+                <a href="../galeria/index.html">Galeria</a>
+                <a href="../contacto/index.html">Contactos</a>
+            </nav>                          
+        </div>
+    </div> 
+    
+     <section class="contenedorgaleria">
+    <h2 class="galeriatitulo">Galería de Imágenes</h2>
+    <ul class="galeria" id="galeria-lista"></ul>
+    <div class="galeria-nav">
+        <button id="prev-btn">Anterior</button>
+        <span id="pagina-actual">Página 1</span>
+        <button id="next-btn">Siguiente</button>
+    </div>
+    </section>          
+  
+<footer class="footerindex">
+       <div class="footercontainer">            
+            <div class="footerdiv">
+                <h3 class="footertitulo">Categorías</h3>
+                <nav class="footermenu">
+                    <a href="#">Inicio</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Asociados</a>
+                    <a href="#">Pronosticos</a>
+                    <a href="#">Galeria</a>
+                    <a href="#">Contactos</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3 class="footertitulo">Sobre Nosotros</h3>
+                <nav class="footermenu">
+                    <a href="#">Nuestra Historia</a>
+                    <a href="#">Misión, Visión y Valores</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos del Servicio</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3 class="footertitulo">Soporte</h3>
+                <nav class="footermenu">
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Ayuda en línea</a>
+                    <a href="#">Cámaras</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <p class="copyright">Todos los derechos Reservados, Madrugadores</p>
+    </footer>  
+     
+<script>
+    const fechaActual = new Date().toLocaleDateString('es-PE', {
+      day: 'numeric',
+      month: 'long'
+    });
+    document.getElementById("fecha-muebles").textContent = fechaActual;
+  </script>   
+    
+ <!-- manejo de paginas de la galeria  -->
+ <script>
+  const galeriaContainer = document.getElementById("galeria-lista");
+  const prevBtn = document.getElementById("prev-btn");
+  const nextBtn = document.getElementById("next-btn");
+  const paginaActual = document.getElementById("pagina-actual");
+
+  const totalImagenes = 200;
+  const porPagina = 16;
+  let pagina = 1;
+
+  function mostrarGaleria(pagina) {
+    galeriaContainer.innerHTML = "";
+    const inicio = (pagina - 1) * porPagina + 1;
+    const fin = Math.min(inicio + porPagina - 1, totalImagenes);
+
+    for (let i = inicio; i <= fin; i++) {
+      const numero = i.toString().padStart(2, '0');
+      const extension = i <= 119 ? 'jpg' : 'jpeg';
+      const ruta = `../images/galeria_${numero}.${extension}`;
+
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = ruta;
+
+      const img = document.createElement("img");
+      img.src = ruta;
+      img.alt = `galería ${numero}`;
+
+      a.appendChild(img);
+      li.appendChild(a);
+      galeriaContainer.appendChild(li);
+    }
+
+    paginaActual.textContent = `Página ${pagina}`;
+    prevBtn.disabled = pagina === 1;
+    nextBtn.disabled = fin === totalImagenes;
+  }
+
+  prevBtn.addEventListener("click", () => {
+    if (pagina > 1) {
+      pagina--;
+      mostrarGaleria(pagina);
+    }
+  });
+
+  nextBtn.addEventListener("click", () => {
+    if (pagina * porPagina < totalImagenes) {
+      pagina++;
+      mostrarGaleria(pagina);
+    }
+  });
+
+  mostrarGaleria(pagina);
+</script>
+
+
+        
+</body>

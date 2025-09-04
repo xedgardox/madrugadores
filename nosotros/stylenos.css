@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+ --color-black: #000;
+ --color-gray: #3d3d42;
+ --color-white: #fff;
+ --color-blue: #037bc0;
+ --color-darkblue: #005485;
+ --color-darkestblue:  #020252;
+ --color-green: #8cbc00;
+ --color-claroceleste:#afd3e6;
+ --color-clarosado:#e1b5bf;
+ --light-gray:rgb(180, 173, 173);
+ --violeta:hsl(277, 64%, 61%);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+button {
+  border: none;
+}
+
+body {  
+  background-color: var(--color-white);
+}
+
+/* menu de navegacion */
+
+.index__header{
+  margin-top: 3%;
+  margin-bottom: 2%;
+    width: 100%;
+    background-color: var(--color-white) ;
+    }
+
+.index__title{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+            }
+
+.index__title__tienda{
+    color: var(--color-black)
+}
+.index__title__muebles{
+    color: var(--color-blue)
+}
+
+.navegacion__principal{
+    font-size: 180%;
+    padding : 1%;
+    display: flex;
+    justify-content: center;
+    gap:2%;
+    color: var(--color-black);
+    font-family: "Raleway", sans-serif;
+    z-index: 10;
+}
+.contenedor__navegacion{
+    border-top: 1px solid var(--color-gray);
+    background-color: var(--color-white); 
+    z-index: 10; 
+    background-color: var(--color-claroceleste);
+        }
+
+
+/* container del texto  */ 
+ 
+.contenedor {
+  background-color: var(--color-darkestblue);
+  width: 70%;
+  height: 100%;
+  margin: 50px auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+ 
+img {
+  width: 100%;
+  height: 30%;
+  display: block;  
+}
+ 
+h1 {
+  margin-top: 40px;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--color-white);
+}
+ 
+.texto {
+  padding: 0px 20px 0px 0px;
+  text-align: center;
+}
+ 
+.parrafo {
+  color: var(--light-gray);
+  font-family: "Inter", sans-serif;
+  font-size: 140%;
+  width: 80%;
+  margin: 18px auto 35px;
+  line-height: 1.5;
+}
+ 
+.contenedor_num {
+  margin-bottom: 15px;
+}
+ 
+.numero {
+  color: var(--color-white);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+ 
+.texto_num {
+  color: var(--color-clarosado);
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+
+ 
+ /** pie de pagina  **/
+
+.footerindex { 
+  border-top: 1px solid var(--light-gray);
+  margin-top: 5%;
+  padding: 5% 20% 0% 20%;
+  background-color: #a8d6ce;
+}
+
+.footertitulo {
+  margin-bottom: 5%;
+  font-size: 120%;
+  font-family: "Playfair Display", sans-serif;
+}
+.footercontainer {
+  font-family: "Raleway", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+  }
+
+.footerdiv {
+  padding-bottom: 10%;
+  padding-left: 15%;
+  padding-right: 15%; 
+}
+
+.footermenu{
+  display: flex; 
+  flex-direction: column;
+  font-size: 20px;  
+}
+.copyright {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* mediaqueries */
+
+ @media (max-width: 1300px) {
+  .galeria {grid-template-columns: 1fr 1fr ;} 
+  .footertitulo {font-size: 100%;}
+  .footermenu {font-size: 100%; }
+   .index__title__tienda{font-size: 140%;}
+  .index__title__muebles{font-size: 140%;}
+  img {  width: 100%; height: 30%;}
+   h1{font-size: 140%;}
+    .parrafo{font-size: 100%;}
+    .contenedor{ height:80%;}
+    .navegacion__principal{
+    width: 60%;
+  font-size: 120%;gap: 1%; 
+  flex-direction: column;
+  padding-left: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  align-items: center; 
+}
+}
+
+
+@media (max-width: 900px) {
+  .galeria {grid-template-columns: 1fr ;}
+  .footertitulo {font-size: 80%;}
+  .footermenu {font-size: 80%; } 
+   .index__title__tienda{font-size: 120%}
+  .index__title__muebles{font-size: 120%;}
+  h1{font-size: 100%;}
+  .parrafo{font-size: 70%;}
+  .contenedor{ height:60%;}
+  .imagenfondo {width: 60%;}
+  img {  width: 100%; height: 20%;}
+   .navegacion__principal{
+    width: 80%;
+    padding-left: 20%;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size:  100%;
+    align-items: center;    
+  }
+    
+  }
+
+  

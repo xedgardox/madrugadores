@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+ --color-black: #000;
+ --color-gray: #3d3d42;
+ --color-white: #fff;
+ --color-blue: #037bc0;
+ --color-darkblue: #005485;
+ --color-darkestblue:  #005485;
+ --color-green: #8cbc00;
+ --color-claroceleste:#afd3e6;
+ --color-clarosado:#e1b5bf;
+ --light-gray:rgb(180, 173, 173);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+button {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {   
+  background-color: var(--color-white);
+  font-family: "Playfair Display", sans-serif;  
+  /* This will make the font size 1.4 times the root element's font size (commonly 16px by default in most browsers, making 1.6rem equal to 25.6px).
+  line-height: 2; */
+}
+
+
+
+/* seccion titulo y menu de navegacion  */
+
+.index__header{
+  margin-top: 3%;
+  margin-bottom: 2%;
+    width: 100%;
+    background-color: var(--color-white) 
+}
+
+.index__title{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+            }
+
+.index__title__tienda{
+    color: var(--color-black)
+}
+.index__title__muebles{
+    color: var(--color-blue)
+}
+.navegacion__principal{
+    font-size: 180%;
+    padding : 1%;
+    display: flex;
+    justify-content: center;
+    gap:2%;
+    color: var(--color-black);
+    font-family: "Raleway", sans-serif;
+    z-index: 10;
+}
+.contenedor__navegacion{
+    border-top: 1px solid var(--color-gray);
+    background-color: var(--color-white); 
+    z-index: 10; 
+        }
+
+        /** Galeria **/
+        
+.galeriatitulo {
+font-size: 200%;
+ text-align: center;
+ margin-top: 0%;
+ margin-bottom: 3%;
+}
+
+.galeria {
+  list-style: none;
+  margin: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+  
+} 
+.galeria img {
+  padding-left: 3%;
+  padding-bottom:3% ;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.galeria-nav {
+  display: flex;
+  border-radius: 15px;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.galeria-nav button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+
+
+/** pie de pagina  **/
+
+.footerindex { 
+  border-top: 1px solid var(--light-gray);
+  margin-top: 5%;
+  padding: 5% 20% 0% 20%;
+}
+
+.footertitulo {
+  margin-bottom: 5%;
+  font-size: 30px;
+  font-family: "Playfair Display", sans-serif;
+}
+.footercontainer {
+  font-family: "Raleway", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+  }
+
+.footerdiv {
+  padding-bottom: 10%;
+  padding-left: 15%;
+  padding-right: 15%; 
+}
+
+.footermenu{
+  display: flex; 
+  flex-direction: column;
+  font-size: 20px;  
+}
+.copyright {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* mediaqueries */
+
+ @media (max-width: 1300px) {
+  .galeria {grid-template-columns: 1fr 1fr 1fr 1fr;} 
+  .footertitulo {font-size: 25px;}
+  .footermenu {font-size: 18px; }
+  .galeriatitulo{font-size: 150%;}  
+  .navegacion__principal{
+    width: 60%;
+  font-size: 120%;gap: 1%; 
+  flex-direction: column;
+  padding-left: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  align-items: center; 
+  
+}
+ }
+
+@media (max-width: 1000px) {
+  .galeria {grid-template-columns: 1fr 1fr 1fr;}
+  .footertitulo {font-size: 18px;}
+  .footermenu {font-size: 14px; } 
+  .galeria img{width:100%;height:8rem;}  
+  .navegacion__principal{
+    width: 80%;
+    padding-left: 20%;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size:  100%;
+    align-items: center;    
+  }
+}
+@media (max-width: 700px) {
+  .galeria {grid-template-columns: 1fr 1fr ;}
+  .galeria img{width:100%;height:5rem;}
+  .footertitulo{
+  font-size: 15px;  
+}
+   
+  }
+
+
+  

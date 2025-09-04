@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>madrugadores</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+ <div class="index__cabecera">
+        <div class="index__header"> 
+            <header class="index__title">
+                <h1 class="index__title__tienda">Madrugadores </h1>
+        <h1 class="index__title__muebles" id="fecha-muebles"></h1> 
+        <br>       
+            </header>
+        </div>
+
+        <div class="contenedor__navegacion">
+            <nav class="navegacion__principal">               
+                <a href="../madrugadores/index.html">Inicio</a>
+                <a href="../madrugadores/nosotros/index.html">Nosotros</a>
+                <a href="../madrugadores/asociados/index.html">Asociados</a>
+                <a href="..//madrugadores/pronosticos/index.html">Pronosticos</a>
+                <a href="../madrugadores/galeria/index.html">Galeria</a>
+                <a href="../madrugadores/contacto/index.html">Contacto</a>
+                <br><br>
+            </nav>                          
+        </div>
+    </div> 
+
+    <div class="container__uno">        
+        <ul class="shapes__list">
+        <li class="shapes__item shapes__item--shape1">
+          <img class="imagenfondo" src="../madrugadores/images/bahianorte.jpg" alt="" />
+        </li>
+        <li class="shapes__item shapes__item--shape2">
+          <img class="sticker" src="../madrugadores/images/madruga 2 copia.jpg" alt="" />
+        </li>                
+      </ul>
+    </div>
+      
+  
+  <script>
+    const fechaActual = new Date().toLocaleDateString('es-PE', {
+      day: 'numeric',
+      month: 'long'
+    });
+    document.getElementById("fecha-muebles").textContent = fechaActual;
+  </script>
+
+
+
+
+<footer class="footerindex">
+       <div class="footercontainer">            
+            <div class="footerdiv">
+                <h3 class="footertitulo">Categorías</h3>
+                <nav class="footermenu">
+                    <a href="#">Inicio</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Asociados</a>
+                    <a href="#">Pronosticos</a>
+                    <a href="#">Galeria</a>
+                    <a href="#">Contactos</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3 class="footertitulo">Sobre Nosotros</h3>
+                <nav class="footermenu">
+                    <a href="#">Nuestra Historia</a>
+                    <a href="#">Misión, Visión y Valores</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos del Servicio</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3 class="footertitulo">Soporte</h3>
+                <nav class="footermenu">
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Ayuda en línea</a>
+                    <a href="#">Cámaras</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <p class="copyright">Todos los derechos Reservados, Madrugadores</p>
+    </footer>
+
+        
+
+
+</body>
+</html>

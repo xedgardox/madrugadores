@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>madrugadores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="index__cabecera">
+    <div class="index__header"> 
+      <header class="index__title">
+        <h1 class="index__title__tienda">Madrugadores </h1>
+        <h1 class="index__title__muebles" id="fecha-muebles"></h1>                     
+      </header>
+    </div>
+
+    <div class="contenedor__navegacion">
+      <nav class="navegacion__principal">               
+        <a href="../index.html">Inicio</a>
+        <a href="../nosotros/index.html">Nosotros</a>
+        <a href="../asociados/index.html">Asociados</a>
+        <a href="../pronosticos/index.html">Pronosticos</a>
+        <a href="../galeria/index.html">Galeria</a>
+        <a href="./xx">Contactos</a>
+      </nav>                          
+    </div>
+  </div> 
+
+  <div class="boyas__surfline">
+    <iframe
+      src="https://www.surfline.com/surf-report/san-bartolo/640a3c98451905496f9be805?view=table"
+      title="Surfline"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+            >
+    </iframe>
+    <br>
+    <iframe
+      src="http://stormsurf.com/cgi-bin/4cast.cgi?ID=gfswave.TPC01"     
+      title="Buoy Forecast"
+      frameborder="0"
+      zoom="200%"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen>
+    </iframe>
+  </div>
+      
+  
+  <script>
+    const fechaActual = new Date().toLocaleDateString('es-PE', {
+      day: 'numeric',
+      month: 'long'
+    });
+    document.getElementById("fecha-muebles").textContent = fechaActual;
+  </script>
+
+
+<footer class="footerindex">
+       <div class="footercontainer">            
+            <div class="footerdiv">
+                <h3 class="footertitulo">Categorías</h3>
+                <nav class="footermenu">
+                    <a href="#">Inicio</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Asociados</a>
+                    <a href="#">Pronosticos</a>
+                    <a href="#">Galeria</a>
+                    <a href="#">Contactos</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3 class="footertitulo">Sobre Nosotros</h3>
+                <nav class="footermenu">
+                    <a href="#">Nuestra Historia</a>
+                    <a href="#">Misión, Visión y Valores</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos del Servicio</a>
+                </nav>
+            </div>
+
+            <div>
+                <h3 class="footertitulo">Soporte</h3>
+                <nav class="footermenu">
+                    <a href="#">Preguntas Frecuentes</a>
+                    <a href="#">Ayuda en línea</a>
+                    <a href="#">Cámaras</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <p class="copyright">Todos los derechos Reservados, Madrugadores</p>
+    </footer>
+
+
+</body>
+</html>

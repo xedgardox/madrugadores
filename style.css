@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --letras: #162677;
+  --blanco: #fff;
+  --suaveceleste: rgb(158, 205, 207);
+  --fondo: #228cba;
+  --rojo: red;
+  --negro: black;
+  --azulmarino: rgb(15, 40, 163);
+   --color-black: #000;
+ --color-gray: #3d3d42;
+ --color-white: #fff;
+ --color-blue: #037bc0;
+ --color-darkblue: #005485;
+ --color-darkestblue:  #005485;
+ --color-green: #8cbc00;
+ --color-claroceleste:#afd3e6;
+ --color-clarosado:#e1b5bf;
+ --light-gray:rgb(180, 173, 173);
+
+}
+
+ 
+body {
+
+ margin-top: 50px;
+ margin-left: 0px;
+ background-color: var(--color-claroceleste) ;
+ font-family:cursive;
+    
+}
+ 
+a {
+    text-decoration: none;
+  color: var(--letras);
+  }
+ 
+li {
+  list-style: none; 
+  justify-content: space-between;
+  }
+
+  ul {
+  list-style: none;
+}
+ 
+.container__uno {
+  width: 100%;
+  height: 800px; 
+  background-color: var(--suaveceleste  );
+  position: relative;
+     z-index: 1;
+   margin: 10px auto;
+   pointer-events: none; 
+     }
+
+/* menu de navegacion */
+
+.index__header{
+  margin-top: 3%;
+  margin-bottom: 2%;
+    width: 100%;
+    background-color: var(--color-white) ;
+    }
+
+.index__title{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+            }
+
+.index__title__tienda{
+    color: var(--color-black)
+}
+.index__title__muebles{
+    color: var(--color-blue)
+}
+
+.navegacion__principal{    
+    font-size: 180%;
+    padding : 1%;
+    display: flex;
+    justify-content: center;
+    gap:2%;
+    color: var(--color-black);
+    font-family: "Raleway", sans-serif;
+    z-index: 10;
+}
+.contenedor__navegacion{
+    border-top: 1px solid var(--color-gray);
+    background-color: var(--color-white); 
+    z-index: 100; 
+        }
+
+
+/* imagen de fondo animacion */
+
+
+  .sticker {
+    width: 100%;
+    position: relative;
+    top: 30px;
+    left: 0px;
+    z-index: 1;
+  }
+
+  .imagenfondo {
+  background-color: var(--suaveceleste);
+  padding: 10px;
+  border: 1px solid var(--azulmarino);  
+  border-radius: 15px;    
+    position: relative;
+    top: 20px;
+    z-index: 0;
+    opacity: 1;
+    box-shadow: -80px 80px 8px rgba(0,0,0,0.1);
+  } 
+ 
+.banner__content {
+  position: relative;
+  z-index: 1;
+   font-size: 17px;
+  color: var(--color-blue);
+
+}
+ 
+.banner__title {    
+  font-weight: 600;   
+  color: var(--negro);
+}
+ 
+.banner__btn {
+  font-weight: bold; 
+  color: var(--fondo); 
+
+}
+
+.shapes__item {  
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  }
+ 
+.shapes__item--shape1 {
+  img{width: 1200px;}
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  animation: showRight 3s ease forwards; 
+  }
+ 
+@keyframes showRight {
+   0% {transform: translate(100vw,-50%);} 
+   100% { transform: translate(-50%,-50%) ;}  
+}
+ 
+.shapes__item--shape2 {
+  animation: showLeft 2s ease forwards;}
+ 
+@keyframes showLeft {
+    0% {transform: translateX(-100vw);} 
+  100% {transform: translate(-50%,-50%);}
+}
+
+
+/** pie de pagina  **/
+
+.footerindex { 
+  border-top: 1px solid var(--light-gray);
+  margin-top: 5%;
+  padding: 5% 20% 0% 20%;
+}
+
+.footertitulo {
+  margin-bottom: 5%;
+  font-size: 30px;
+  font-family: "Playfair Display", sans-serif;
+}
+.footercontainer {
+  font-family: "Raleway", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+  }
+
+.footerdiv {
+  padding-bottom: 10%;
+  padding-left: 15%;
+  padding-right: 15%; 
+}
+
+.footermenu{
+  display: flex; 
+  flex-direction: column;
+  font-size: 20px;  
+}
+.copyright {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* mediaqueries */
+
+ @media (max-width: 1200px) {
+  .footertitulo {font-size: 100%;}
+  .footermenu {font-size: 100%; } 
+  .container__uno { width: 80%; height: 450px;} 
+  .shapes__item--shape1 {img{max-width: 1000px;}}
+  .index__title__tienda{font-size: 25px;}
+  .index__title__muebles{font-size: 25px;}
+   .navegacion__principal{
+    width: 60%;
+  font-size: 120%;gap: 1%; 
+  flex-direction: column;
+  padding-left: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  align-items: center; 
+}
+}
+
+@media (max-width: 700px) {
+  .footertitulo {font-size: 90%x;}
+  .footermenu {font-size: 90%; }
+  .container__uno { width: 70%;height: 400px;} 
+  .shapes__item--shape1 {img{max-width: 800px;}}
+   .index__title__tienda{font-size: 20px;}
+  .index__title__muebles{font-size: 20px;}
+   .navegacion__principal{
+    width: 80%;
+    padding-left: 20%;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size:  100%;
+    align-items: center;    
+  }}
+
+
+  
+
+
